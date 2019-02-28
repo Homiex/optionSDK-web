@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>Option Trading</title>
+    <!-- 以下为测试内容 -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="/demo.js"></script>
+    <!-- 以上为测试内容 -->
+    <link href="/static/css/app.dcde298569bcb2fdaf31.css" rel=stylesheet>
+</head>
+<body>
+    <div id=root></div>
+    <script>!function () { "use strict"; var o = Boolean("localhost" === window.location.hostname || "[::1]" === window.location.hostname || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)); window.addEventListener("load", function () { "serviceWorker" in navigator && ("https:" === window.location.protocol || o) && navigator.serviceWorker.register("service-worker.js").then(function (o) { o.onupdatefound = function () { if (navigator.serviceWorker.controller) { var n = o.installing; n.onstatechange = function () { switch (n.state) { case "installed": break; case "redundant": throw new Error("The installing service worker became redundant.") } } } } }).catch(function (o) { console.error("Error during service worker registration:", o) }) }) }();</script>
+    <script type=text/javascript src="/static/js/manifest.17e26147c691f463001b.js"></script>
+    <script type=text/javascript src="/static/js/vendor.f469dfdfbcb41f3c7055.js"></script>
+    <script type=text/javascript src="/static/js/iconfont.f3f806b5022b3afe1815.js"></script>
+    <script type=text/javascript src="/static/js/app.84d935a4ce4ea423b3b9.js"></script>
+
+    <!-- 以下为测试内容 -->
+    <style>
+        #demo {
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            min-width: 100px;
+            min-height: 250px;
+            padding: 10px;
+            background: #fff;
+        }
+        #demo button {
+            min-width: 50px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <div id="demo">
+        SDK功能测试：<br>
+        <button onclick="demo.getConfig()">getConfig</button><br>
+        <button onclick="demo.setLanguege('LANGAUGE_ENGLISH')">setLanguege('LANGAUGE_ENGLISH')</button><br>
+        <button onclick="demo.setLanguege('LANGAUGE_SIMPLE_CHINESE')">setLanguege('LANGAUGE_SIMPLE_CHINESE')</button><br>
+        <button onclick="demo.setLanguege('LANGAUGE_KOREAN')">setLanguege('LANGAUGE_KOREAN')</button><br>
+        <button onclick="demo.login()">login</button><br>
+        <button onclick="demo.setUserInfo()">setUserInfo</button><br>
+        <button onclick="demo.clearCache()">clearCache</button>
+    </div>
+    <!-- 以上为测试内容 -->
+</body>
+</html>
