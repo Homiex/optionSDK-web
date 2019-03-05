@@ -1,15 +1,20 @@
 /* demo 演示项目 */
-// 当前版本 v0.1.0.20190228
+// 当前版本 v0.1.0.20190306
 
 const { $ } = window;
 
+// 测试数据，如果执行了登录，需要把测试数据注释
+window.localStorage.userId = window.userId || '2508713162866033664';
+window.localStorage.sessionId = window.sessionId || 'ddc7c62d0229e9b62976d5b19b50d465';
+window.localStorage.userAuth = window.userAuth || '{"registerAccount":""}';
+
 // 初始化参数
-window.FOTA_OPTION_CONFIG = {
+window.FOTA_OPTION_CONFIG = window.FOTA_OPTION_CONFIG || {
     isDevelopment: true,
-    socketHost: '172.16.50.180:8088/mapi/option/websocket', // api-test.fota.com/mapi/option/websocket
-    httpHost: '//172.16.50.203:8896/v1', // api-test.fota.com/mapi/v1
+    socketHost: 'wss://api-test.fota.com/mapi/websocket',
+    httpHost: 'https://api-test.fota.com/mapi/v1',
     // 申请的平台id
-    brokerId: 119,
+    brokerId: 2,
     // SDK加载完成回调
     ready(optionManager) {
         // 调用业务代码
@@ -28,8 +33,8 @@ const mapUrl = {
     logout: '/users/subaccount/logout'
 };
 window.demo = {
-    userId: '2509065103023670272', // 测试账号
-    password: '6sxsixuymb', // 测试密码
+    userId: window.userId || '2508713162866033664', // 测试账号
+    password: window.password || '8ri4hittxn', // 测试密码
     token: '',
     ready(optionManager) {
         console.log('ready');
@@ -58,14 +63,12 @@ window.demo = {
     },
     // 登录，自由发挥
     login() {
-        const timestamp = Date.now();
-        $.ajax(window.FOTA_OPTION_CONFIG.httpHost + mapUrl.login, {
+        return $.ajax(window.FOTA_OPTION_CONFIG.httpHost + mapUrl.login, {
             method: 'post',
             headers: {
                 'content-type': 'application/json',
                 apikey: 'fota',
-                timestamp,
-                signature: 'fota-option-open-api' // 测试签名
+                signature: 'fota-option-open-api' // 演示用签名
             },
             data: JSON.stringify({
                 userId: this.userId,
@@ -75,7 +78,9 @@ window.demo = {
             if (res.code === 0) {
                 this.token = res.data.token;
                 console.log('getToken', this.token);
+                return this.token;
             }
+            return null;
         });
     },
     // 设置用户信息
