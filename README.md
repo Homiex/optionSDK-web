@@ -113,7 +113,7 @@ ready(optionManager) {
     // 保证SDK加载完成后，再开始调用接口
 },
 // 事件监听回调
-on(page) {
+on(page, data) {
     // event - 事件
     // data - 数据
     // 包含'login'、'deposit'、'allorder'、'rich'、'trade'
@@ -145,7 +145,7 @@ optionManager.setUserInfo({
 ### 3.6 清除用户信息
 
 ```javascript
-// 清理数据相当于退出登录，刷新后生效
+// 清理客户端缓存，退出登录
 optionManager.clearCache()
 ```
 
@@ -158,29 +158,30 @@ optionManager.getConfig()
 ## 四、常见问题
 
 #### 如何切换正式环境
-- isDevelopment设为true，socketHost和httpHost无需修改
+- isDevelopment设为false，socketHost和httpHost无需修改
 
 #### ready回调什么用
-- ready回调执行后，可以调用其他接口
+- ready回调执行后，才可以调用其他接口
 
 #### on回调什么用
-- on回调是对特殊事件的监听，如登录、充值等，跳转相应页面。或者下单、财富更新等，记录日志。
+- on回调是对特殊事件的监听，如登录、充值等，跳转相应页面；或者下单、财富更新等，用于记录日志。
 
 #### 用户登录是什么流程
-- 用户登录平台账号后，通过/users/subaccount/login的服务端接口获取用户token，再调用optionManager.setUserInfo的SDK接口完成期权内登录
+- 用户登录平台方账号后，平台方调用我方服务端的/users/subaccount/login接口获取用户token，再调用我方SDK的optionManager.setUserInfo接口完成期权内登录
 
 #### 用户退出是什么流程
-- 调用optionManager.clearCache的SDK接口，清除客户端缓存，再调用/users/subaccount/logout服务端接口清除服务端token
+- 调用我方SDK的optionManager.clearCache接口，清除客户端缓存，再调用我方服务端的/users/subaccount/logout接口清除服务端token
 
-#### 一定要用demo.js或jQuery.js吗
-- 不需要，这些文件只是演示用的，实际代码能完成业务流程即可，没有任何框架限制
+#### 一定要用demo.js和jQuery.js吗
+- 不需要，这些js只是演示用的，实际代码完成业务流程即可，也没有任何框架限制
 
 
 ## 五、更新记录
 以下是SDK更新记录
 
-v0.1.1.20190307 回调的函数名改为on，增加财富更新、下单的回调通知
-v0.1.0.20190306 标准版本，提供看行情、多账户下单的功能，ATM和OTM的玩法
+v0.1.1.20190307 监听事件回调的函数名改为on，增加财富更新、下单的回调通知
+
+v0.1.0.20190306 标准版本，提供看行情、多账户下单等功能，ATM和OTM的玩法
 
 
 ## 六、功能截图
