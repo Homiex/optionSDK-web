@@ -1,12 +1,14 @@
 /* demo 演示项目 */
-// 当前版本 v0.1.0.20190306
+// 当前版本 v0.1.1.20190307
 
 const { $ } = window;
 
-// 测试数据，如果执行了登录，需要把测试数据注释
-window.localStorage.userId = window.userId || '2508713162866033664';
-window.localStorage.sessionId = window.sessionId || 'ddc7c62d0229e9b62976d5b19b50d465';
-window.localStorage.userAuth = window.userAuth || '{"registerAccount":""}';
+// 测试数据，默认执行了登录
+window.userId = '2509245659993474048'; // 测试账号
+window.password = '9ncfhrj3w2'; // 测试密码
+window.localStorage.userId = window.userId;
+window.localStorage.sessionId = '90c2d91742cbad499c4a465486574b47'; // 如果过期，请改用真实账号测试
+window.localStorage.userAuth = '{"registerAccount":""}';
 
 // 初始化参数
 window.FOTA_OPTION_CONFIG = window.FOTA_OPTION_CONFIG || {
@@ -21,9 +23,9 @@ window.FOTA_OPTION_CONFIG = window.FOTA_OPTION_CONFIG || {
         window.demo.ready(optionManager);
     },
     // 特殊跳转回调
-    goto(page) {
+    on(event, data) {
         // 调用业务代码
-        window.demo.goto(page);
+        window.demo.on(event, data);
     }
 };
 
@@ -33,21 +35,25 @@ const mapUrl = {
     logout: '/users/subaccount/logout'
 };
 window.demo = {
-    userId: window.userId || '2508713162866033664', // 测试账号
-    password: window.password || '8ri4hittxn', // 测试密码
+    userId: window.userId,
+    password: window.password,
     token: '',
     ready(optionManager) {
         console.log('ready');
         this.optionManager = optionManager;
     },
     // 特殊跳转回调
-    goto(page) {
-        if (page === 'login') {
+    on(event, data) {
+        if (event === 'login') {
             console.log('跳转登录');
-        } else if (page === 'deposit') {
+        } else if (event === 'deposit') {
             console.log('跳转充值');
-        } else if (page === 'allorder') {
+        } else if (event === 'allorder') {
             console.log('跳转完整交易记录');
+        } else if (event === 'rich') {
+            console.log('财富更新', data);
+        } else if (event === 'trade') {
+            console.log('下单请求', data);
         }
     },
     // 查看配置
@@ -63,7 +69,11 @@ window.demo = {
     },
     // 登录，自由发挥
     login() {
-        return $.ajax(window.FOTA_OPTION_CONFIG.httpHost + mapUrl.login, {
+        if (this.userId === '2509245659993474048') {
+            console.log('2509245659993474048是公共账号，不可重置token');
+            return Promise.reject();
+        }
+        return $.ajax(this.optionManager.getConfig().httpHost + mapUrl.login, {
             method: 'post',
             headers: {
                 'content-type': 'application/json',

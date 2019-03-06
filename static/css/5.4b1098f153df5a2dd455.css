@@ -1806,7 +1806,6 @@
   right: 160px;
   top: 60px;
   left: 0;
-  z-index: 100;
   min-width: 1120px;
   height: calc(100vh - 105px);
   pointer-events: none; }

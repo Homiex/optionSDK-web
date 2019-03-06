@@ -1,4 +1,4 @@
-# option-sdkweb-demo
+# option-sdkweb-demo v0.1.1.20190307
 ## 目录
 - [一、集成SDK](#一集成sdk)
 - [二、快速使用SDK](#二快速使用sdk)
@@ -18,30 +18,43 @@
 
 ### 下载项目工程
 
-#### 1.1 项目目录
+### 1.1 项目目录
 
-static - 静态资源文件夹，包含css、js、图片、字体
+```
+static - 静态资源文件夹
+  - css -> 样式
+  - fonts -> 字体图标
+  - img -> 图片
+  - js -> 脚本
 
-index.html - 主页文件
+index.html - 入口页面
 
-service-worker.js - 缓存文件
+service-worker.js - 缓存索引
 
 favicon.ico - 网站图标
 
-demo.js - 测试文件，可以替换为任何文件
+demo.js - 测试文件，按照实际业务改写
+```
+
+### 1.2 修改演示文件
+
+需要修改的演示文件包括：
+```
+index.html - 增加业务相关的js文件引用，添加业务相关的html和css
+
+demo.js - 增加SDK需要的参数配置，其他内容没有任何限制
+
+favicon.ico - 替换为平台需要的图标
+```
 
 
 ## 二、快速使用SDK
 
-### 2.1 修改测试文件
+### 2.1 本地测试
 
-需要修改的文件包括：
+打开index.html，页面会自动登录演示账号，后续可以进行各种操作。
 
-index.html - 增加业务相关的js文件引用，添加业务相关的html和css
-
-demo.js - 增加SDK需要的配置参数，文件名没有限制
-
-favicon.ico - 替换为平台需要的图标
+如果接口提示验签失败，可能是测试账号的token过期了，可以用测试账号，重新调用login接口，获取token。
 
 
 ## 三、接口说明
@@ -51,19 +64,20 @@ favicon.ico - 替换为平台需要的图标
 ```javascript
 window.FOTA_OPTION_CONFIG = {
     isDevelopment: true,
-    socketHost: 'api-test.fota.com/mapi/option/websocket',
-    httpHost: '//api-test.fota.com/mapi/v1',
+    socketHost: 'wss://api-test.fota.com/mapi/websocket',
+    httpHost: 'http://api-test.fota.com/mapi/v1',
     // 申请的平台id
-    brokerId: 119,
+    brokerId: 2,
     // SDK加载完成回调
     ready(optionManager) {
         // 调用业务代码
         // optionManager - 管理接口的对象
     },
-    // 特殊跳转回调
-    goto(page) {
+    // 事件监听回调
+    on(event, data) {
         // 调用业务代码
-        // page - 跳转路由
+        // event - 事件
+        // data - 数据
     }
 };
 ```
@@ -98,11 +112,12 @@ ready(optionManager) {
     // optionManager - 管理接口的对象
     // 保证SDK加载完成后，再开始调用接口
 },
-// 特殊跳转回调
-goto(page) {
-    // page - 跳转路由
-    // 包含'login'、'deposit'、'allorder'几种情况
-    // 分别是，跳转登录，跳转充值，跳转完整交易记录
+// 事件监听回调
+on(page) {
+    // event - 事件
+    // data - 数据
+    // 包含'login'、'deposit'、'allorder'、'rich'、'trade'
+    // 分别是，跳转登录、跳转充值、跳转完整交易记录、财富更新、下单请求
 }
 ```
 
@@ -142,29 +157,30 @@ optionManager.getConfig()
 
 ## 四、常见问题
 
-### 如何切换正式环境
+#### 如何切换正式环境
 - isDevelopment设为true，socketHost和httpHost无需修改
 
-### ready回调什么用
+#### ready回调什么用
 - ready回调执行后，可以调用其他接口
 
-### goto回调什么用
-- 可以响应用户操作，如登录、充值等，跳转相应页面
+#### on回调什么用
+- on回调是对特殊事件的监听，如登录、充值等，跳转相应页面。或者下单、财富更新等，记录日志。
 
-### 用户登录是什么流程
+#### 用户登录是什么流程
 - 用户登录平台账号后，通过/users/subaccount/login的服务端接口获取用户token，再调用optionManager.setUserInfo的SDK接口完成期权内登录
 
-### 用户退出是什么流程
+#### 用户退出是什么流程
 - 调用optionManager.clearCache的SDK接口，清除客户端缓存，再调用/users/subaccount/logout服务端接口清除服务端token
 
-### 一定要用demo.js或jQuery.js吗
+#### 一定要用demo.js或jQuery.js吗
 - 不需要，这些文件只是演示用的，实际代码能完成业务流程即可，没有任何框架限制
 
 
 ## 五、更新记录
 以下是SDK更新记录
 
-v0.1.0.20190306 提供基础功能，包含看行情和下单
+v0.1.1.20190307 修改回调的函数名，增加下单/下单成功/结算的回调通知
+v0.1.0.20190306 提供基础功能，包含看行情和下单，包含ATM和OTM的玩法
 
 
 ## 六、功能截图
