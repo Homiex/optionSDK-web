@@ -1,4 +1,4 @@
-# option-sdkweb-demo v0.1.1.20190307
+# option-sdkweb-demo v0.1.2.20190322
 ## 目录
 - [一、集成SDK](#一集成sdk)
 - [二、快速使用SDK](#二快速使用sdk)
@@ -18,22 +18,18 @@
 
 ### 下载项目工程
 
-### 1.1 项目目录
+### 1.1 项目结构
 
 ```
-static - 静态资源文件夹
-  - css -> 样式
-  - fonts -> 字体图标
-  - img -> 图片
-  - js -> 脚本
-
-index.html - 入口页面
-
-service-worker.js - 缓存索引
-
-favicon.ico - 网站图标
-
-demo.js - 测试文件，按照实际业务改写
+└── static - 静态资源文件夹
+    ├── css - 样式
+    ├── fonts - 字体图标
+    ├── img - 图片
+    └── js - 脚本
+├── index.html - 入口页面
+├── service-worker.js - 缓存索引
+├── favicon.ico - 网站图标
+└── demo.js - 演示代码
 ```
 
 ### 1.2 修改演示文件
@@ -42,7 +38,7 @@ demo.js - 测试文件，按照实际业务改写
 ```
 index.html - 增加业务相关的js文件引用，添加业务相关的html和css
 
-demo.js - 增加SDK需要的参数配置，其他内容没有任何限制
+demo.js - 修改SDK需要的实际配置，其他内容没有任何限制
 
 favicon.ico - 替换为平台需要的图标
 ```
@@ -54,7 +50,7 @@ favicon.ico - 替换为平台需要的图标
 
 打开index.html，页面会自动登录演示账号，后续可以进行各种操作。
 
-如果接口提示验签失败，可能是测试账号的token过期了，可以重新调用login接口，获取token。
+如果接口提示验签失败，可能是测试账号的token过期了，需要重新调用login接口，获取token。
 
 
 ## 三、接口说明
@@ -113,11 +109,11 @@ ready(optionManager) {
     // 保证SDK加载完成后，再开始调用接口
 },
 // 事件监听回调
-on(page, data) {
+on(event, data) {
     // event - 事件
     // data - 数据
-    // 包含'login'、'deposit'、'allorder'、'rich'、'trade'
-    // 分别是，跳转登录、跳转充值、跳转完整交易记录、财富更新、下单请求
+    // 包含'login'、'deposit'、'allorder'、'rich'、'trade'、'settle'
+    // 分别是，跳转登录、跳转充值、跳转完整交易记录、财富更新、下单请求、结算记录
 }
 ```
 
@@ -161,7 +157,7 @@ optionManager.getConfig()
 - isDevelopment设为false，socketHost和httpHost无需修改
 
 #### ready回调什么用
-- ready回调执行后，才可以调用其他接口
+- ready回调执行后，才可以调用其他功能接口
 
 #### on回调什么用
 - on回调是对特殊事件的监听，如登录、充值等，跳转相应页面；或者下单、财富更新等，用于记录日志。
@@ -175,9 +171,14 @@ optionManager.getConfig()
 #### 一定要用demo.js和jQuery.js吗
 - 不需要，这些js只是演示用的，实际代码完成业务流程即可，也没有任何框架限制
 
+#### 如何增加自定义的UI代码
+- 可以在原有html页面上添加任意html+css+js的代码
+
 
 ## 五、更新记录
 以下是SDK更新记录
+
+v0.1.2.20190322 增加左侧边栏UI，增加音效，优化性能，增加结算的回调
 
 v0.1.1.20190307 监听事件回调的函数名改为on，增加财富更新、下单的回调通知
 
@@ -185,4 +186,4 @@ v0.1.0.20190306 标准版本，提供看行情、多账户下单等功能，ATM�
 
 
 ## 六、功能截图
-以下是SDK部分功能截图
+SDK功能预览，直接运行index.html即可
