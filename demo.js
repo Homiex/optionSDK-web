@@ -1,5 +1,5 @@
 /* demo 演示项目 */
-// 当前版本 v0.1.1.20190307
+// 当前版本 v0.1.2.20190322
 
 const { $ } = window;
 
@@ -7,7 +7,7 @@ const { $ } = window;
 window.userId = '2509245659993474048'; // 测试账号
 window.password = '9ncfhrj3w2'; // 测试密码
 window.localStorage.userId = window.userId;
-window.localStorage.sessionId = '90c2d91742cbad499c4a465486574b47'; // 如果过期，请改用真实账号测试
+window.localStorage.sessionId = '6f652c4e414973194644b1e0d50950c4'; // 如果过期，请改用真实账号测试
 window.localStorage.userAuth = '{"registerAccount":""}';
 
 // 初始化参数
@@ -54,6 +54,8 @@ window.demo = {
             console.log('财富更新', data);
         } else if (event === 'trade') {
             console.log('下单请求', data);
+        } else if (event === 'settle') {
+            console.log('结算结果', data);
         }
     },
     // 查看配置
