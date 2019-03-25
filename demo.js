@@ -1,5 +1,5 @@
 /* demo 演示项目 */
-// 当前版本 v0.3.1.20190325
+// 当前版本 v0.3.2.20190325
 
 const { $ } = window;
 
@@ -54,10 +54,8 @@ window.demo = {
             console.log('财富更新', data);
         } else if (event === 'trade') {
             console.log('下单请求', data);
-        } else if (event === 'tradeUnsettled') {
-            console.log('未结算订单', data);
-        } else if (event === 'tradeSettled') {
-            console.log('已结算订单', data);
+        } else if (event === 'tradeSucc') {
+            console.log('下单成功', data);
         } else if (event === 'settle') {
             console.log('结算结果', data);
         }

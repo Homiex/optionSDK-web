@@ -1,4 +1,4 @@
-# option-sdkweb-demo v0.1.2.20190322
+# option-sdkweb-demo v0.3.2.20190325
 ## 目录
 - [一、集成SDK](#一集成sdk)
 - [二、快速使用SDK](#二快速使用sdk)
@@ -112,8 +112,8 @@ ready(optionManager) {
 on(event, data) {
     // event - 事件
     // data - 数据
-    // 包含'login'、'deposit'、'allorder'、'rich'、'trade'、'tradeUnsettled'、'tradeSettled'、'settle'
-    // 分别是，跳转登录、跳转充值、跳转完整交易记录、财富更新、下单请求、未结算订单、已结算订单、结算记录
+    // 包含'login'、'deposit'、'allorder'、'rich'、'trade'、'tradeSucc'、'settle'
+    // 分别是，跳转登录、跳转充值、跳转完整交易记录、财富更新、下单请求、下单成功、结算记录
 }
 ```
 
@@ -178,7 +178,7 @@ optionManager.getConfig()
 ## 五、更新记录
 以下是SDK更新记录
 
-v0.3.1.20190325 更新结算点UI，优化性能，增加未结算订单和已结算订单的回调
+v0.3.2.20190325 更新结算点UI，优化性能，增加下单成功的回调
 
 v0.3.0.20190322 增加左侧边栏UI，增加音效，优化性能，增加结算的回调
 
