@@ -1,14 +1,14 @@
 /* demo 演示项目 */
-// 当前版本 v0.3.3.20190325
+// 当前版本 v0.3.5.20190328
 
 const { $ } = window;
 
 // 演示代码，默认用测试账号执行了登录
 window.userId = '2509245659993474048'; // 测试账号
 window.password = '9ncfhrj3w2'; // 测试密码
-window.localStorage.userId = window.userId;
-window.localStorage.sessionId = '6f652c4e414973194644b1e0d50950c4'; // 如果过期，请改用真实账号测试
-window.localStorage.userAuth = '{"registerAccount":""}';
+window.localStorage.option_userId = window.userId;
+window.localStorage.option_sessionId = '3d5fd5690699208eb395c972272f41c2'; // 如果过期，请改用真实账号测试
+window.localStorage.option_userAuth = '{"registerAccount":""}';
 
 // 初始化参数
 window.FOTA_OPTION_CONFIG = {
