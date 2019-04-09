@@ -320,6 +320,9 @@
   cursor: pointer; }
 
 .time-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   margin-left: 10px;
   border-radius: 4px;
@@ -328,8 +331,10 @@
   -webkit-transition: left 0.3s linear;
   transition: left 0.3s linear; }
   .time-tab .time-tab-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     display: inline-block;
-    width: 25%;
     height: 34px;
     line-height: 34px;
     border: 1px solid transparent;
@@ -751,6 +756,212 @@
       .historyBox .kill_scroller ul li:last-child {
         border-bottom: none; }
 
+.rankBox {
+  height: 100%; }
+  .rankBox .rankTitle {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    line-height: 20px; }
+    .rankBox .rankTitle h2 {
+      font-size: 14px;
+      color: #D6DAE2;
+      text-align: left;
+      float: left;
+      margin-bottom: 0;
+      position: relative;
+      -webkit-animation: inith1 0.5s cubic-bezier(0, 0, 0, 1.11) 0s 1 normal backwards running;
+              animation: inith1 0.5s cubic-bezier(0, 0, 0, 1.11) 0s 1 normal backwards running; }
+  .rankBox .rank-select {
+    padding-top: 40px;
+    text-align: left;
+    border-bottom: 1px solid #3B414F;
+    margin-bottom: 10px; }
+    .rankBox .rank-select .rank-select-main {
+      position: relative;
+      height: 40px; }
+      .rankBox .rank-select .rank-select-main div {
+        position: absolute;
+        width: 100%;
+        padding: 5px 10px;
+        background: #2E3648;
+        font-size: 14px;
+        color: #FFFFFF;
+        height: 34px;
+        border-radius: 4px;
+        line-height: 24px;
+        cursor: pointer; }
+        .rankBox .rank-select .rank-select-main div i {
+          color: rgba(255, 255, 255, 0.8);
+          float: right; }
+      .rankBox .rank-select .rank-select-main ul {
+        position: absolute;
+        z-index: 200;
+        background: #2E3648;
+        top: 38px;
+        border-radius: 4px;
+        width: 100%;
+        -webkit-box-shadow: 0 0 6px 0 #0f182a;
+                box-shadow: 0 0 6px 0 #0f182a;
+        overflow: hidden;
+        -webkit-transition: height 0.3s linear;
+        transition: height 0.3s linear; }
+        .rankBox .rank-select .rank-select-main ul li {
+          height: 30px;
+          line-height: 30px;
+          padding: 0 10px;
+          color: rgba(255, 255, 255, 0.6);
+          cursor: pointer;
+          -webkit-transition: background 0.2s linear;
+          transition: background 0.2s linear; }
+        .rankBox .rank-select .rank-select-main ul li:hover {
+          background: #252b39; }
+    .rankBox .rank-select p {
+      font-size: 12px;
+      color: #8F97AE;
+      margin: 14px 0 10px 0; }
+    .rankBox .rank-select .rank-myrank {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 40px;
+      line-height: 40px; }
+    .rankBox .rank-select .myrank-left {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      font-size: 12px;
+      color: #FFFFFF; }
+      .rankBox .rank-select .myrank-left svg {
+        margin: 6px 5px 0 0; }
+      .rankBox .rank-select .myrank-left .rankNum {
+        float: left;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        margin: 5px 5px 0 0;
+        color: #FFFFFF;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAABC1BMVEUAAAANirUAlMEVtu4NirUAxv8NirUVtu8NibUJjbURuP8AlMAVt+8FirYAq/8NirQWtu4Vt+4OirUVt+8NirUWt+4NibQNirUVt/AMibUAkrYVt+8NirQWtu8NibQOirUMibUUt+8NirUIi7QRufMVtfQPvPENibUVt+4Vt+8Vtu4NirUVt/ANirUMirUKibgLibUJibgMu/MRu+4Uq+AVt+4Vtu8Vtu8NirUNirUNirUVuO8QlcMVuO4Ut/ETuO8Li7UUufANirYMibYUufATuvMNi7UWvPAVt+4Wtu4Wt+8OirUOkb4TqNwSpdgTqd4QnM0PlcQTreMUs+kSpNcRodQOjLgOi7cOjbneYNXWAAAASnRSTlMA6Av+bAfK+vgaCgWQEQP89vPz8NDFxZeEPw6/u7qqpZGKhB4dGBHCtpyYjHZ0YjEsIhQP9+bdwbGfnH5xallORkQ7NjMoJyKnpWJEpVkAAAJySURBVFjD7ZVnVyIxFIYzDDIgIE0pijTpHbF3XctuLmBD3f//S3bKTswkZoDwzePzMZf3OXdybw7oh5k8PCwpaDSWy5c1rbyUoIlxc5l8RcNYqywhCGGdkHx+VzME0V1pQRGbFKUbiFqC6FBSkMb/ScvlhzFbEBtKNkA4lcmvxjAhsSohOMUUbYkGErQgsbJg+vbiN3bw5+J2rs8I3l22G4f7+Ev2D5vty7ug6OFen4fqByqeiXpQD51fl7mmN/BCbHAftLKxUJ5cqpxhy8jzhi2JvJRhm+Q5w/Zc+TUkZG0OQ53K83j2ZuX3PMgNLzy65x/B67rJCrgbxgBK0LUBnbFbXsfr2gAxiPKuLXjB5FkkeAZwa8HTU8DkSSR4AhOlx0wikOmW8j4FbCYiwQRsFF++1M0EzN3J+YHhRSR4AQZ/Tt+q8DowqCKBCgzrYYR4wwgLGTH5TWSySQzkDoVjoPEZecvgA4o3seDNkfdQE/w0MLucSDhfAp/nDa+YEEtXq+kYJrwCIelhtihpV96xTbRYNUrVYpQcfXB5wg6Ac5G1UMWuVUIae4s7iCXjHII6PaOrZ1OVLLNJhn9I9CKrkxG06GoBRhNDMQUQPagUWWQzDpClq1ljwcbq5zKnOIF9iR/q2No3ha4qAKaCjKHGCeJg8ZesK3XPYbLm72ARFw3B3+rYqhv+huOdlh8sAozgCgwiKf08XLJ+1GVvOF7Slz+QioDBFSPoGPH8AJkECoai4LxhfyGMTAb5r8ZwDHB0T33RcYQeQw0iJ1TP/SOAE0bgy/acB/c5hRpCbuCs/qolEXOCOPrkTzDY56s36IdvxD/yirGNGxGyjAAAAABJRU5ErkJggg==) no-repeat;
+        background-position: bottom;
+        background-size: 100%;
+        line-height: 30px;
+        text-align: center; }
+    .rankBox .rank-select .myrank-right {
+      text-align: right;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      font-size: 12px;
+      color: #8F97AE; }
+      .rankBox .rank-select .myrank-right .win-num {
+        color: #35CD4C; }
+  .rankBox .rank-table {
+    height: calc(100% - 168px); }
+    .rankBox .rank-table .rank-head {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .rankBox .rank-table .rank-head .rank-head-item {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        font-size: 14px;
+        color: #6C7482;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        -webkit-transition: background 0.2s linear;
+        transition: background 0.2s linear;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none; }
+      .rankBox .rank-table .rank-head .active {
+        background: #2E3648;
+        color: #FFFFFF;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px; }
+    .rankBox .rank-table .rank-tab {
+      overflow: hidden;
+      height: calc(100% - 40px); }
+    .rankBox .rank-table ul {
+      overflow-y: auto;
+      height: 100%;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px; }
+      .rankBox .rank-table ul li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        line-height: 44px;
+        background: #2E3648;
+        border-bottom: 1px solid #3b414f;
+        position: relative; }
+        .rankBox .rank-table ul li .rank-tab-left {
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          font-size: 12px;
+          color: #FFFFFF;
+          text-align: left; }
+          .rankBox .rank-table ul li .rank-tab-left svg {
+            float: left;
+            margin: 6px 5px 0 10px; }
+          .rankBox .rank-table ul li .rank-tab-left .profit {
+            line-height: 44px;
+            float: left;
+            width: 41px;
+            text-align: center; }
+        .rankBox .rank-table ul li .rank-tab-right {
+          text-align: right;
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          font-size: 12px;
+          color: #8F97AE;
+          margin-right: 10px; }
+          .rankBox .rank-table ul li .rank-tab-right .win-num {
+            color: #35CD4C; }
+        .rankBox .rank-table ul li .deep-line {
+          position: absolute;
+          display: inline-block;
+          height: 1px;
+          background: #35CD4C;
+          bottom: -1px; }
+    .rankBox .rank-table .backto-scroll {
+      width: 140px;
+      height: 40px;
+      opacity: 0.6;
+      background: #0E1119;
+      border-radius: 4px;
+      position: fixed;
+      left: 50%;
+      margin-left: -70px;
+      -webkit-transition: -webkit-transform 0.3s ease-in-out;
+      transition: -webkit-transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+      font-size: 14px;
+      color: #FFFFFF;
+      line-height: 40px;
+      cursor: pointer;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      font-weight: bold; }
+      .rankBox .rank-table .backto-scroll i {
+        color: #fff;
+        line-height: 40px; }
+    .rankBox .rank-table .top-scroll {
+      -webkit-transform: translateY(-70px);
+          -ms-transform: translateY(-70px);
+              transform: translateY(-70px); }
+    .rankBox .rank-table .bottom-scroll {
+      -webkit-transform: translateY(20px);
+          -ms-transform: translateY(20px);
+              transform: translateY(20px); }
+
 .navigationBar {
   float: left;
   width: 66px; }
@@ -907,6 +1118,128 @@
     background: rgba(61, 121, 236, 0.1); }
     .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-active a {
       color: #3d79ec; }
+
+.notify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+  .notify .notifyPop {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 2;
+    width: 400px;
+    height: 250px;
+    padding: 20px 30px 30px;
+    border-radius: 4px;
+    background: #212838;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+    .notify .notifyPop .notify-footer {
+      position: absolute;
+      bottom: 30px;
+      width: calc(100% - 60px);
+      text-align: center; }
+      .notify .notifyPop .notify-footer .btn {
+        float: right;
+        width: 140px;
+        height: 36px;
+        border: 2px solid transparent;
+        border-radius: 22px;
+        outline: none;
+        text-align: center;
+        font-size: 16px;
+        letter-spacing: 0; }
+      .notify .notifyPop .notify-footer .btnPrimary {
+        width: 140px;
+        height: 36px;
+        margin: 0 auto;
+        border: 2px solid transparent;
+        border-radius: 22px;
+        outline: none;
+        text-align: center;
+        font-size: 16px;
+        letter-spacing: 0; }
+
+.nickPop .nickPop-box {
+  text-align: left; }
+  .nickPop .nickPop-box h5 {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0; }
+  .nickPop .nickPop-box .nickPop-box-conbox {
+    padding-top: 37px; }
+    .nickPop .nickPop-box .nickPop-box-conbox input {
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 6px;
+      background: transparent;
+      letter-spacing: 1px;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .nickPop .nickPop-box .nickPop-box-conbox input::-webkit-input-placeholder {
+        letter-spacing: 0; }
+    .nickPop .nickPop-box .nickPop-box-conbox p {
+      float: right;
+      font-size: 12px;
+      letter-spacing: 0;
+      color: #E74C4C; }
+    .nickPop .nickPop-box .nickPop-box-conbox .nickPop-box-forget {
+      float: left;
+      font-size: 14px;
+      color: #3D79EC;
+      letter-spacing: 0;
+      cursor: pointer; }
+  .nickPop .nickPop-box .nickPop-box-ts {
+    margin-top: 41px;
+    text-align: center;
+    font-size: 14px; }
+    .nickPop .nickPop-box .nickPop-box-ts a {
+      display: inline-block;
+      margin-top: 13px; }
+
+.nickPop .notify-footer {
+  text-align: right !important; }
+
+.ft-theme-bg-default {
+  background: #212838 !important;
+  overflow: hidden; }
+
+.ft-theme-s3 {
+  color: #C5CDE1; }
+
+.ft-theme-box-input {
+  border-bottom: 1px solid #363B4D;
+  color: #C5CDE1; }
+
+.ft-theme-box-input:focus {
+  border-bottom: 1px solid #C5CDE1; }
+
+.ft-theme-box-input::-webkit-input-placeholder {
+  color: #7A87B0;
+  letter-spacing: 0px; }
+
+.ft-theme-box-input:-ms-input-placeholder {
+  color: #7A87B0;
+  letter-spacing: 0px; }
+
+.ft-theme-box-input::-ms-input-placeholder {
+  color: #7A87B0;
+  letter-spacing: 0px; }
+
+.ft-theme-box-input::placeholder {
+  color: #7A87B0;
+  letter-spacing: 0px; }
 
 @charset "UTF-8";
 .dealPoint {
@@ -1812,9 +2145,7 @@
 @charset "UTF-8";
 .btnGroupZoom {
   display: none;
-  position: absolute;
-  bottom: 44px;
-  left: 45%; }
+  position: relative; }
   .btnGroupZoom .btnZoom {
     margin-right: 30px;
     font-size: 30px;
@@ -1833,6 +2164,27 @@
 
 .zoomContainer:hover .btnZoom, .hoverContainer:hover + .zoomContainer .btnZoom {
   opacity: .6; }
+
+.kline-loading {
+  position: absolute;
+  z-index: 99;
+  background-image: linear-gradient(-45deg, transparent 0em, transparent 0.5em, #363e4f 0.6em, #363e4f 1.1em, transparent 1.2em, transparent 1.7em, #363e4f 1.8em);
+  background-size: 1.7em 1.7em;
+  opacity: 0.5;
+  -webkit-animation: warning-animation 0.75s infinite linear;
+          animation: warning-animation 0.75s infinite linear; }
+
+@-webkit-keyframes warning-animation {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 1.7em 0; } }
+
+@keyframes warning-animation {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 1.7em 0; } }
 
 @charset "UTF-8";
 .priceTag {
@@ -2077,7 +2429,14 @@
   position: absolute;
   top: 15px;
   left: 10px;
-  bottom: 30px; }
+  bottom: 30px;
+  z-index: 99; }
+
+/* 缩放区 */
+.btnGroupZoom {
+  position: absolute;
+  bottom: 44px;
+  left: 48%; }
 
 /* 价格标签显示开关 */
 .priceTag-switch {
@@ -2183,6 +2542,7 @@
     -webkit-animation-delay: 5s;
             animation-delay: 5s; }
 
+@charset "UTF-8";
 .trade {
   float: right;
   position: relative;
@@ -2599,16 +2959,20 @@
   .trade .trade-block:last-child {
     margin-bottom: 0; }
 
+/* 重置样式 */
+.ant-tooltip {
+  min-width: 240px; }
+
 .ant-tooltip-inner {
   min-height: auto;
+  line-height: 20px;
   padding: 3px 5px 3px 5px;
+  border-radius: 2px;
+  background-color: #696F80 !important;
   font-size: 12px;
   color: #fff;
-  background-color: #696F80 !important;
   -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
-  line-height: 20px; }
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1); }
 
 .ant-tooltip-arrow {
   border-left-color: #696F80 !important; }

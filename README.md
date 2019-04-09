@@ -1,4 +1,4 @@
-# option-sdkweb-demo v0.3.5.20190328
+# option-sdkweb-demo v0.4.0.20190409
 ## 目录
 - [一、集成SDK](#一集成sdk)
 - [二、快速使用SDK](#二快速使用sdk)
@@ -154,31 +154,36 @@ optionManager.getConfig()
 ## 四、常见问题
 
 #### 如何切换正式环境
-- isDevelopment设为false，socketHost和httpHost无需修改
+- isDevelopment设为false，socketHost和httpHost无需修改。
 
 #### ready回调什么用
-- ready回调执行后，才可以调用其他功能接口
+- ready回调执行后，才可以调用其他功能接口。
 
 #### on回调什么用
 - on回调是对特殊事件的监听，如登录、充值等，跳转相应页面；或者下单、财富更新等，用于记录日志。
 
 #### 用户登录是什么流程
-- 用户登录平台方账号后，平台方调用我方服务端的/users/subaccount/login接口获取用户token，再调用我方SDK的optionManager.setUserInfo接口完成期权内登录
+- 用户登录平台方账号后，平台方调用我方服务端的/users/subaccount/login接口获取用户token，再调用我方SDK的optionManager.setUserInfo接口完成期权内登录。
 
 #### 用户退出是什么流程
-- 调用我方SDK的optionManager.clearCache接口，清除客户端缓存，再调用我方服务端的/users/subaccount/logout接口清除服务端token
+- 调用我方SDK的optionManager.clearCache接口，清除客户端缓存，再调用我方服务端的/users/subaccount/logout接口清除服务端token。
 
 #### 一定要用demo.js和jQuery.js吗
-- 不需要，这些js只是演示用的，实际代码完成业务流程即可，也没有任何框架限制
+- 不需要，这些js只是演示用的，实际代码完成业务流程即可，也没有任何框架限制。
 
 #### 如何增加自定义的UI代码
-- 可以在原有html页面上添加任意html+css+js的代码
+- 可以在原有html页面上添加任意html+css+js的代码。
+
+#### 静态资源如图片或者字体提示404错误
+- 静态资源打包时，在路径里包含了static，建议保留文件夹命名。如果修改了文件夹，请同步调整css和js文件内的变量。
 
 
 ## 五、更新记录
 以下是SDK更新记录
 
-v0.3.5.20190328 优化侧边栏，优化全局样式，优化性能，更新本地缓存key名避免和券商冲突
+v0.4.0.20190409 增加排行榜，增加昵称的设置弹窗
+
+v0.3.5.20190328 优化侧边栏，优化全局样式，优化性能，更新本地缓存key名避免和三方冲突
 
 v0.3.4.20190326 更新结算点UI，优化性能，增加下单成功的回调
 
