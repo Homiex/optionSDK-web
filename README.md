@@ -1,4 +1,4 @@
-# option-sdkweb-demo v0.4.2.20190411
+# option-sdkweb-demo v0.4.3.20190412
 ## 目录
 - [一、集成SDK](#一集成sdk)
 - [二、快速使用SDK](#二快速使用sdk)
@@ -62,8 +62,10 @@ window.FOTA_OPTION_CONFIG = {
     isDevelopment: true,
     socketHost: 'wss://api-test.fota.com/mapi/websocket',
     httpHost: 'http://api-test.fota.com/mapi/v1',
-    // 申请的平台id
-    brokerId: 2,
+    // 申请的平台id字符串
+    brokerId: '2',
+    // 排行榜开关
+    showRank: true,
     // SDK加载完成回调
     ready(optionManager) {
         // 调用业务代码
@@ -112,8 +114,8 @@ ready(optionManager) {
 on(event, data) {
     // event - 事件
     // data - 数据
-    // 包含'login'、'deposit'、'allorder'、'rich'、'trade'、'tradeSucc'、'settle'
-    // 分别是，跳转登录、跳转充值、跳转完整交易记录、财富更新、下单请求、下单成功、结算记录
+    // 包含'login'、'deposit'、'allorder'、'rich'、'trade'、'tradeSucc'、'settle'、'lang'
+    // 分别是，跳转登录、跳转充值、跳转完整交易记录、财富更新、下单请求、下单成功、结算记录、'语言切换'
 }
 ```
 
@@ -177,9 +179,14 @@ optionManager.getConfig()
 #### 静态资源如图片或者字体提示404错误
 - 静态资源打包时，在路径里包含了static，建议保留文件夹命名。如果修改了文件夹，请同步调整css和js文件内的变量。
 
+#### 如何隐藏排行榜
+- 设置showRank为false。
+
 
 ## 五、更新记录
 以下是SDK更新记录
+
+v0.4.3.20190412 增加排行榜和昵称的开关配置，增加语言切换回调
 
 v0.4.2.20190411 增加排行榜，增加昵称的设置弹窗
 

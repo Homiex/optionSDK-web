@@ -1,5 +1,5 @@
 /* demo 演示项目 */
-// 当前版本 v0.4.1.20190409
+// 当前版本 v0.4.3.20190413
 
 const { $ } = window;
 
@@ -14,8 +14,10 @@ window.FOTA_OPTION_CONFIG = {
     isDevelopment: true,
     socketHost: 'wss://api-test.fota.com/mapi/websocket',
     httpHost: 'https://api-test.fota.com/mapi/v1',
-    // 申请的平台id
+    // 申请的平台id字符串
     brokerId: '2',
+    // 排行榜开关
+    showRank: true,
     // SDK加载完成回调
     ready(optionManager) {
         // 调用业务代码
@@ -57,6 +59,8 @@ window.demo = {
             console.log('下单成功', data);
         } else if (event === 'settle') {
             console.log('结算结果', data);
+        } else if (event === 'lang') {
+            console.log('语言切换', data);
         }
     },
     // 查看配置
