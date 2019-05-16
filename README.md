@@ -1,4 +1,4 @@
-# option-sdkweb-demo v0.4.4.20190423
+# option-sdkweb-demo v0.4.5.20190430
 ## 目录
 - [一、集成SDK](#一集成sdk)
 - [二、快速使用SDK](#二快速使用sdk)
@@ -122,12 +122,14 @@ on(event, data) {
 ### 3.4 设置语言
 
 ```javascript
-// LANGAUGE_ENGLISH - 英文
+// LANGAUGE_ENGLISH - 英语
 optionManager.setLanguege(optionManager.LANGAUGE_ENGLISH)
 // LANGAUGE_SIMPLE_CHINESE - 简体中文
 optionManager.setLanguege(optionManager.LANGAUGE_SIMPLE_CHINESE)
-// LANGAUGE_KOREAN - 韩文
+// LANGAUGE_KOREAN - 韩语
 optionManager.setLanguege(optionManager.LANGAUGE_KOREAN)
+// LANGAUGE_VIETNAM - 越南语
+optionManager.setLanguege(optionManager.LANGAUGE_VIETNAM)
 ```
 
 ### 3.5 设置登录token
@@ -177,14 +179,22 @@ optionManager.getConfig()
 - 可以在原有html页面上添加任意html+css+js的代码。
 
 #### 静态资源如图片或者字体提示404错误
-- 静态资源打包时，在路径里包含了static，建议保留文件夹命名。如果修改了文件夹，请同步调整css和js文件内的变量。
+- 静态资源打包时，在路径里包含了static，建议保留文件夹命名。如果要修改文件夹名，请同步调整css和js文件内的路径变量。
+
+#### 升级后的sw打包机制，有什么变化
+- 目前使用workbox插件管理sw，打包后的目录里会增加workbox-v4的文件夹。
 
 #### 如何隐藏排行榜
 - 设置showRank为false。
 
+#### 如何实现灵活上币
+- iconfont文件目前以固定地址引入，地址可加时间戳。配置后台添加新币种后，线上文件内容会更新，达到灵活上币的效果。
+
 
 ## 五、更新记录
 以下是SDK更新记录
+
+v0.4.5.20190430 增加更多时间维度，增加连续缩放，增加灵活上币
 
 v0.4.4.20190423 升级sw的打包机制
 
