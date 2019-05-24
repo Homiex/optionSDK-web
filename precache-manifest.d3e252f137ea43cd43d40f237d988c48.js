@@ -4,39 +4,39 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "favicon.ico"
   },
   {
-    "revision": "1882387eef36293ea4d6",
-    "url": "static/css/4.e1f2e450.css"
+    "revision": "54830166e4230db60abe",
+    "url": "static/css/4.a39e30c4.css"
   },
   {
-    "revision": "bf2439f4c992b6d6ac3b",
+    "revision": "a583de1894be414914c7",
     "url": "static/css/app.7a735ee0.css"
   },
   {
-    "revision": "e75866e8625b12b13b9aefd14afc91cd",
+    "revision": "b312e6e2f7701704c181c4d4ca283c4f",
     "url": "static/iconfont/iconfont.css"
   },
   {
-    "revision": "c21a6960e780bf4599cf316f5118785d",
+    "revision": "5ecf2df0944a8c41f66c22e7b93cdb72",
     "url": "static/iconfont/iconfont.eot"
   },
   {
-    "revision": "2769c0e9274955b78a66782b632a010a",
+    "revision": "3615d778b3d68e14b02337ad0bb127a3",
     "url": "static/iconfont/iconfont.js"
   },
   {
-    "revision": "9bce34a626d783296d53ce28fcafe92b",
+    "revision": "757501c511d73d84e5f0dfd5d2c89bf7",
     "url": "static/iconfont/iconfont.svg"
   },
   {
-    "revision": "283ee91c3940adb76a09ad589a3d5660",
+    "revision": "79dc00a9247687f5df12c9a0206e73f4",
     "url": "static/iconfont/iconfont.ttf"
   },
   {
-    "revision": "6f58a8d6b19b6bae9251bfd68fda3ef1",
+    "revision": "a1e8a5e20de3c5d2be3607ed7f7aa5ba",
     "url": "static/iconfont/iconfont.woff"
   },
   {
-    "revision": "8b0f28c110fbc90c7d38444579ae953d",
+    "revision": "94ed02b3018408eec464fb130b6b7dc4",
     "url": "static/iconfont/iconfont.woff2"
   },
   {
@@ -44,24 +44,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "static/img/bg-chart.ec1abc6d.png"
   },
   {
-    "revision": "1882387eef36293ea4d6",
-    "url": "static/js/4.f86da4d7.js"
+    "revision": "54830166e4230db60abe",
+    "url": "static/js/4.c476c445.js"
   },
   {
-    "revision": "bf2439f4c992b6d6ac3b",
-    "url": "static/js/app.78d836f4.js"
+    "revision": "a583de1894be414914c7",
+    "url": "static/js/app.87fc889b.js"
   },
   {
     "revision": "fb4849800419a6afadcc",
     "url": "static/js/highcharts.6cbb988b.js"
   },
   {
-    "revision": "1c73bb7ff33c1755ec39",
-    "url": "static/js/manifest.476fc1aa.js"
+    "revision": "49b64ff316bf6fbca5bb",
+    "url": "static/js/manifest.334cea52.js"
   },
   {
-    "revision": "916207decae50047f7de",
-    "url": "static/js/vendor.1a29c2db.js"
+    "revision": "37d3e5210da8ad9518e8",
+    "url": "static/js/vendor.8debb098.js"
   },
   {
     "revision": "ab5ac977d30db6829e21aaf5cba5a013",
@@ -126,9 +126,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "245afe1d9a8ae539c684b21e71d97746",
     "url": "static/media/turnend.245afe1d.ogg"
-  },
-  {
-    "revision": "bd55189945dd50be2374de9a4822a81f",
-    "url": "test.js"
   }
 ]);

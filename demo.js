@@ -1,5 +1,5 @@
 /* demo 演示项目 */
-// 当前版本 v0.4.5.20190430
+// 当前版本 v0.5.0.20190520
 
 const { $ } = window;
 
@@ -7,7 +7,7 @@ const { $ } = window;
 window.userId = '2509245659993474048'; // 测试账号
 window.password = '9ncfhrj3w2'; // 测试密码
 window.localStorage.option_userId = window.userId;
-window.localStorage.option_sessionId = 'e731efa099702a5812b80e3a6ac85278'; // 如果过期，请改用真实账号测试
+window.localStorage.option_sessionId = '6409886e08b21609f033870409317d07'; // 如果过期，请改用真实账号测试
 
 // 初始化参数
 window.FOTA_OPTION_CONFIG = {
