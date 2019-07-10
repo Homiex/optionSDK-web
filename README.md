@@ -1,4 +1,4 @@
-# option-sdkweb-demo v0.5.0.20190520
+# option-sdkweb-demo v0.6.0.20190709
 ## 目录
 - [一、集成SDK](#一集成sdk)
 - [二、快速使用SDK](#二快速使用sdk)
@@ -67,7 +67,7 @@ window.FOTA_OPTION_CONFIG = {
     socketHost: 'wss://api-test.fota.com/mapi/websocket',
     httpHost: 'http://api-test.fota.com/mapi/v1',
     // 申请的平台id字符串
-    brokerId: '2',
+    brokerId: 'test',
     // 排行榜开关
     showRank: true,
     // SDK加载完成回调
@@ -191,12 +191,20 @@ optionManager.getConfig()
 #### 如何隐藏排行榜
 - 设置showRank为false。
 
+#### 如何隐藏教学视频
+- 设置showVideo为false。
+
+#### 如何配置Gamma期权的上线和下线
+- 和商务沟通，由技术在内部的管理后台操作。
+
 #### 如何实现灵活上币
 - iconfont文件目前以固定地址引入，地址可加时间戳。配置后台添加新币种后，线上文件内容会更新，达到灵活上币的效果。
 
 
 ## 五、更新记录
 以下是SDK更新记录
+
+v0.6.0.20190709 增加Gamma期权的玩法，增加教学视频
 
 v0.5.0.20190520 增加灵活上币，优化排行榜
 

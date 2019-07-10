@@ -1,5 +1,5 @@
 /* demo 演示项目 */
-// 当前版本 v0.5.0.20190520
+// 当前版本 v0.5.0.20190620
 
 const { $ } = window;
 
@@ -7,13 +7,13 @@ const { $ } = window;
 window.userId = '2509245659993474048'; // 测试账号
 window.password = '9ncfhrj3w2'; // 测试密码
 window.localStorage.option_userId = window.userId;
-window.localStorage.option_sessionId = '6409886e08b21609f033870409317d07'; // 如果过期，请改用真实账号测试
+window.localStorage.option_sessionId = '5197ecc20b4119773148a9f89d58a859'; // 如果过期，请改用真实账号测试
 
 // 初始化参数
 window.FOTA_OPTION_CONFIG = {
     isDevelopment: true,
     socketHost: 'wss://api-test.fota.com/mapi/websocket',
-    httpHost: 'https://api-test.fota.com/mapi/v1',
+    httpHost: 'https://api-test.fota.com/mapi',
     // 申请的平台id字符串
     brokerId: '2',
     // 排行榜开关
@@ -32,8 +32,8 @@ window.FOTA_OPTION_CONFIG = {
 
 // 以下只是演示代码
 const mapUrl = {
-    login: '/users/subaccount/login',
-    logout: '/users/subaccount/logout'
+    login: '/v1/users/subaccount/login',
+    logout: '/v1/users/subaccount/logout'
 };
 window.demo = {
     userId: window.userId,

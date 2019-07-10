@@ -4,39 +4,39 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "favicon.ico"
   },
   {
-    "revision": "54830166e4230db60abe",
-    "url": "static/css/4.a39e30c4.css"
+    "revision": "daa0a3bb1d1799e52e59",
+    "url": "static/css/4.bd0504d8.css"
   },
   {
-    "revision": "a583de1894be414914c7",
-    "url": "static/css/app.7a735ee0.css"
+    "revision": "f7d5485f1fb1f0f3f89a",
+    "url": "static/css/app.12e8c2f9.css"
   },
   {
-    "revision": "b312e6e2f7701704c181c4d4ca283c4f",
+    "revision": "1eb06aed98c396eb91fe8d8331b1ce8e",
     "url": "static/iconfont/iconfont.css"
   },
   {
-    "revision": "5ecf2df0944a8c41f66c22e7b93cdb72",
+    "revision": "7f3116a6e1655abf7013c26fd4a82212",
     "url": "static/iconfont/iconfont.eot"
   },
   {
-    "revision": "3615d778b3d68e14b02337ad0bb127a3",
+    "revision": "614bbbc2cf22aa7d0c62abb812745ff7",
     "url": "static/iconfont/iconfont.js"
   },
   {
-    "revision": "757501c511d73d84e5f0dfd5d2c89bf7",
+    "revision": "a42cd0124184fda44b412f69c9efd46c",
     "url": "static/iconfont/iconfont.svg"
   },
   {
-    "revision": "79dc00a9247687f5df12c9a0206e73f4",
+    "revision": "fbf4a33af9885b21fd47d683e4f1803d",
     "url": "static/iconfont/iconfont.ttf"
   },
   {
-    "revision": "a1e8a5e20de3c5d2be3607ed7f7aa5ba",
+    "revision": "efb1d498f7443ea4b48519b5a614befb",
     "url": "static/iconfont/iconfont.woff"
   },
   {
-    "revision": "94ed02b3018408eec464fb130b6b7dc4",
+    "revision": "f3bb1c8e2e342b304276f9a65e8aa8ae",
     "url": "static/iconfont/iconfont.woff2"
   },
   {
@@ -44,24 +44,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "static/img/bg-chart.ec1abc6d.png"
   },
   {
-    "revision": "54830166e4230db60abe",
-    "url": "static/js/4.c476c445.js"
+    "revision": "daa0a3bb1d1799e52e59",
+    "url": "static/js/4.3851e578.js"
   },
   {
-    "revision": "a583de1894be414914c7",
-    "url": "static/js/app.87fc889b.js"
+    "revision": "f7d5485f1fb1f0f3f89a",
+    "url": "static/js/app.638ef4da.js"
   },
   {
-    "revision": "fb4849800419a6afadcc",
-    "url": "static/js/highcharts.6cbb988b.js"
+    "revision": "0344ca1368b74b648bd6",
+    "url": "static/js/highcharts.8697fff6.js"
   },
   {
-    "revision": "49b64ff316bf6fbca5bb",
-    "url": "static/js/manifest.334cea52.js"
+    "revision": "4a8d3bf7dc664307fcb9",
+    "url": "static/js/manifest.3913bb17.js"
   },
   {
-    "revision": "37d3e5210da8ad9518e8",
-    "url": "static/js/vendor.8debb098.js"
+    "revision": "fa3f153fccd66ff01011",
+    "url": "static/js/vendor.2ba4b364.js"
   },
   {
     "revision": "ab5ac977d30db6829e21aaf5cba5a013",
