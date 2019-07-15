@@ -4,11 +4,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "favicon.ico"
   },
   {
-    "revision": "daa0a3bb1d1799e52e59",
+    "revision": "87c28a871a5f15c8601a",
     "url": "static/css/4.bd0504d8.css"
   },
   {
-    "revision": "f7d5485f1fb1f0f3f89a",
+    "revision": "0c0887df9d1471eb1441",
     "url": "static/css/app.12e8c2f9.css"
   },
   {
@@ -44,24 +44,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "static/img/bg-chart.ec1abc6d.png"
   },
   {
-    "revision": "daa0a3bb1d1799e52e59",
-    "url": "static/js/4.3851e578.js"
+    "revision": "f959bece8896a6c5fba0647d7f6011c5",
+    "url": "static/img/js-rule.f959bece.png"
   },
   {
-    "revision": "f7d5485f1fb1f0f3f89a",
-    "url": "static/js/app.638ef4da.js"
+    "revision": "87c28a871a5f15c8601a",
+    "url": "static/js/4.72a6464b.js"
+  },
+  {
+    "revision": "0c0887df9d1471eb1441",
+    "url": "static/js/app.67f8a52c.js"
   },
   {
     "revision": "0344ca1368b74b648bd6",
     "url": "static/js/highcharts.8697fff6.js"
   },
   {
-    "revision": "4a8d3bf7dc664307fcb9",
-    "url": "static/js/manifest.3913bb17.js"
+    "revision": "172e04f380d067a1a4b5",
+    "url": "static/js/manifest.33fba021.js"
   },
   {
-    "revision": "fa3f153fccd66ff01011",
-    "url": "static/js/vendor.2ba4b364.js"
+    "revision": "5c666313f2129951ca09",
+    "url": "static/js/vendor.580dd182.js"
   },
   {
     "revision": "ab5ac977d30db6829e21aaf5cba5a013",

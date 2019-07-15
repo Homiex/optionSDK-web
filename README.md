@@ -5,7 +5,7 @@
 - [三、接口说明](#三接口说明)
 - [四、常见问题](#四常见问题)
 - [五、更新记录](#五更新记录)
-- [六、功能截图](#六功能截图)
+- [六、功能预览](#六功能预览)
 
 
 ## 一、集成SDK
@@ -27,7 +27,9 @@
     ├── img - 图片
     └── js - 脚本
 ├── index.html - 入口页面
-├── service-worker.js - 缓存索引
+├── service-worker.js - sw入口文件
+├── precache-manifest.js - 文件缓存索引
+├── workbox-v4.3.1 - sw缓存依赖
 ├── favicon.ico - 网站图标
 └── demo.js - 演示代码
 ```
@@ -70,6 +72,8 @@ window.FOTA_OPTION_CONFIG = {
     brokerId: 'test',
     // 排行榜开关
     showRank: true,
+    // 教学视频开关
+    showVideo: true,
     // SDK加载完成回调
     ready(optionManager) {
         // 调用业务代码
@@ -200,9 +204,16 @@ optionManager.getConfig()
 #### 如何实现灵活上币
 - iconfont文件目前以固定地址引入，地址可加时间戳。配置后台添加新币种后，线上文件内容会更新，达到灵活上币的效果。
 
+#### 人机验证码有什么用，如何接入
+- 通过人机验证码，限制用户过于频繁的下单
+- 接入改动，加上：`<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>`
+- 其他代码不需要改动
+
 
 ## 五、更新记录
 以下是SDK更新记录
+
+v0.7.0.20190715 增加下单过于频繁的人机验证码
 
 v0.6.0.20190709 增加Gamma期权的玩法，增加教学视频
 
@@ -227,5 +238,5 @@ v0.2.0.20190307 监听事件回调的函数名改为on，增加财富更新、�
 v0.1.0.20190306 标准版本，提供看行情、多账户下单等功能，ATM和OTM的玩法
 
 
-## 六、功能截图
+## 六、功能预览
 SDK功能预览，直接运行index.html即可
