@@ -1,5 +1,5 @@
 /* demo 演示项目 */
-// 当前版本 v0.7.0.20190715
+// 当前版本 v0.7.1.20190723
 
 const { $ } = window;
 
@@ -7,7 +7,7 @@ const { $ } = window;
 window.userId = '2509245659993474048'; // 测试账号
 window.password = '9ncfhrj3w2'; // 测试密码
 window.localStorage.option_userId = window.userId;
-window.localStorage.option_sessionId = '5197ecc20b4119773148a9f89d58a859'; // 如果过期，请改用真实账号测试
+window.localStorage.option_sessionId = 'ca6607a327190cb047bd61ce451f8860'; // 如果过期，请改用真实账号测试
 
 // 初始化参数
 window.FOTA_OPTION_CONFIG = {
@@ -51,6 +51,8 @@ window.demo = {
             console.log('跳转充值');
         } else if (event === 'allorder') {
             console.log('跳转完整交易记录');
+        } else if (event === 'click_asset') {
+            console.log('点击交易对', data);
         } else if (event === 'rich') {
             console.log('财富更新', data);
         } else if (event === 'trade') {

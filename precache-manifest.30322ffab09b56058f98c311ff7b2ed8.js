@@ -4,11 +4,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "favicon.ico"
   },
   {
-    "revision": "87c28a871a5f15c8601a",
+    "revision": "cc332500891e565ac0ca",
     "url": "static/css/4.bd0504d8.css"
   },
   {
-    "revision": "0c0887df9d1471eb1441",
+    "revision": "8c8d20cef88734ffb70b",
     "url": "static/css/app.12e8c2f9.css"
   },
   {
@@ -44,28 +44,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "static/img/bg-chart.ec1abc6d.png"
   },
   {
-    "revision": "f959bece8896a6c5fba0647d7f6011c5",
-    "url": "static/img/js-rule.f959bece.png"
+    "revision": "b50cd744e5e2305388c6f1b02aa0f7ab",
+    "url": "static/img/js-rule.b50cd744.png"
   },
   {
-    "revision": "87c28a871a5f15c8601a",
-    "url": "static/js/4.72a6464b.js"
+    "revision": "cc332500891e565ac0ca",
+    "url": "static/js/4.daaa31ea.js"
   },
   {
-    "revision": "0c0887df9d1471eb1441",
-    "url": "static/js/app.67f8a52c.js"
+    "revision": "8c8d20cef88734ffb70b",
+    "url": "static/js/app.cc62959f.js"
   },
   {
-    "revision": "0344ca1368b74b648bd6",
-    "url": "static/js/highcharts.8697fff6.js"
+    "revision": "8fdb301f4d07a8a23e32",
+    "url": "static/js/highcharts.b440f5a1.js"
   },
   {
-    "revision": "172e04f380d067a1a4b5",
-    "url": "static/js/manifest.33fba021.js"
+    "revision": "bd146714bb65281c9e83",
+    "url": "static/js/manifest.de4ce8a7.js"
   },
   {
-    "revision": "5c666313f2129951ca09",
-    "url": "static/js/vendor.580dd182.js"
+    "revision": "752c6fa48823de58ac52",
+    "url": "static/js/vendor.5d2468eb.js"
   },
   {
     "revision": "ab5ac977d30db6829e21aaf5cba5a013",

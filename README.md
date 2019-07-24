@@ -1,4 +1,4 @@
-# option-sdkweb-demo v0.6.0.20190709
+# option-sdkweb-demo v0.7.1.20190723
 ## 目录
 - [一、集成SDK](#一集成sdk)
 - [二、快速使用SDK](#二快速使用sdk)
@@ -67,7 +67,7 @@ brokerId、appkey、signature是有绑定关系的，需要在js文件中使用�
 window.FOTA_OPTION_CONFIG = {
     isDevelopment: true,
     socketHost: 'wss://api-test.fota.com/mapi/websocket',
-    httpHost: 'http://api-test.fota.com/mapi/v1',
+    httpHost: 'http://api-test.fota.com/mapi',
     // 申请的平台id字符串
     brokerId: 'test',
     // 排行榜开关
@@ -122,8 +122,8 @@ ready(optionManager) {
 on(event, data) {
     // event - 事件
     // data - 数据
-    // 包含'login'、'deposit'、'allorder'、'rich'、'trade'、'tradeSucc'、'settle'、'lang'
-    // 分别是，跳转登录、跳转充值、跳转完整交易记录、财富更新、下单请求、下单成功、结算记录、'语言切换'
+    // 包含'login'、'deposit'、'allorder'、'click_asset'、'rich'、'trade'、'tradeSucc'、'settle'、'lang'
+    // 分别是，跳转登录、跳转充值、跳转完整交易记录、点击交易对、财富更新、下单请求、下单成功、结算记录、'语言切换'
 }
 ```
 
@@ -198,20 +198,28 @@ optionManager.getConfig()
 #### 如何隐藏教学视频
 - 设置showVideo为false。
 
+#### 如何隐藏Gamma期权的教程弹窗
+- 在localStorage加一个option_gammarule的key，值为1。
+
 #### 如何配置Gamma期权的上线和下线
-- 和商务沟通，由技术在内部的管理后台操作。
+- 和商务沟通，由我们在配置后台操作。
+
+#### http请求报404的异常
+- 老版本的httpHost配置里有一个v1的字符串，参考demo.js去掉地址里的v1。
 
 #### 如何实现灵活上币
 - iconfont文件目前以固定地址引入，地址可加时间戳。配置后台添加新币种后，线上文件内容会更新，达到灵活上币的效果。
 
 #### 人机验证码有什么用，如何接入
-- 通过人机验证码，限制用户过于频繁的下单
+- 通过人机验证码，限制用户过于频繁的下单。
 - 接入改动，加上：`<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>`
-- 其他代码不需要改动
+- 其他代码不需要改动。
 
 
 ## 五、更新记录
 以下是SDK更新记录
+
+v0.7.1.20190723 优化性能，完善异常处理
 
 v0.7.0.20190715 增加下单过于频繁的人机验证码
 
