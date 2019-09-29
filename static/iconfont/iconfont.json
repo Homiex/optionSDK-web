@@ -1,0 +1,303 @@
+{
+  "id": "1167891",
+  "name": "期权-sub",
+  "font_family": "iconsvg",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2228452",
+      "name": "美国国旗",
+      "font_class": "flag-mg",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "3594468",
+      "name": "中国国旗",
+      "font_class": "flag-zg",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "3959892",
+      "name": "USDT",
+      "font_class": "coin-usdt",
+      "unicode": "e686",
+      "unicode_decimal": 59014
+    },
+    {
+      "icon_id": "6300074",
+      "name": "eth",
+      "font_class": "coin-eth",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    },
+    {
+      "icon_id": "6331938",
+      "name": "问号",
+      "font_class": "wenhao",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "6383002",
+      "name": "银牌",
+      "font_class": "rank-sec",
+      "unicode": "e6a7",
+      "unicode_decimal": 59047
+    },
+    {
+      "icon_id": "6383012",
+      "name": "金牌-N",
+      "font_class": "rank-first",
+      "unicode": "e6a8",
+      "unicode_decimal": 59048
+    },
+    {
+      "icon_id": "6383014",
+      "name": "铜牌",
+      "font_class": "rank-third",
+      "unicode": "e6a9",
+      "unicode_decimal": 59049
+    },
+    {
+      "icon_id": "6580742",
+      "name": "旗子",
+      "font_class": "flag",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "6623514",
+      "name": "BTC-USD",
+      "font_class": "asset-1",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "6623522",
+      "name": "ETH-USD",
+      "font_class": "asset-2",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    },
+    {
+      "icon_id": "6829770",
+      "name": "btc-黄",
+      "font_class": "coin-btc",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "6879407",
+      "name": "FOTA icon",
+      "font_class": "coin-fota",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "7093289",
+      "name": "韩国",
+      "font_class": "flag-hg",
+      "unicode": "e6b9",
+      "unicode_decimal": 59065
+    },
+    {
+      "icon_id": "7219302",
+      "name": "模拟-绿",
+      "font_class": "coin-prac",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "7439157",
+      "name": "iconfinder_Dogecoin_",
+      "font_class": "coin-doge",
+      "unicode": "e6bc",
+      "unicode_decimal": 59068
+    },
+    {
+      "icon_id": "7603321",
+      "name": "bts bg",
+      "font_class": "coin-bts",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "7698689",
+      "name": "越南",
+      "font_class": "flag-yn",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "7923559",
+      "name": "TSC",
+      "font_class": "coin-tsc",
+      "unicode": "e6ab",
+      "unicode_decimal": 59051
+    },
+    {
+      "icon_id": "8016921",
+      "name": "DragonEX",
+      "font_class": "coin-dt",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "8154196",
+      "name": "星星",
+      "font_class": "rank-star",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "8195942",
+      "name": "bw-红底白标",
+      "font_class": "coin-bwb",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    },
+    {
+      "icon_id": "8309270",
+      "name": "coni",
+      "font_class": "coin-coni",
+      "unicode": "e6a5",
+      "unicode_decimal": 59045
+    },
+    {
+      "icon_id": "8440424",
+      "name": "波场",
+      "font_class": "coin-trx",
+      "unicode": "e6b7",
+      "unicode_decimal": 59063
+    },
+    {
+      "icon_id": "8441484",
+      "name": "ATT",
+      "font_class": "coin-att",
+      "unicode": "e6b8",
+      "unicode_decimal": 59064
+    },
+    {
+      "icon_id": "8852762",
+      "name": "YC",
+      "font_class": "coin-yc",
+      "unicode": "e6ba",
+      "unicode_decimal": 59066
+    },
+    {
+      "icon_id": "8966706",
+      "name": "ida",
+      "font_class": "coin-ida",
+      "unicode": "e6c5",
+      "unicode_decimal": 59077
+    },
+    {
+      "icon_id": "8966711",
+      "name": "ioex",
+      "font_class": "coin-ioex",
+      "unicode": "e6c7",
+      "unicode_decimal": 59079
+    },
+    {
+      "icon_id": "8966716",
+      "name": "vds",
+      "font_class": "coin-vds",
+      "unicode": "e6c9",
+      "unicode_decimal": 59081
+    },
+    {
+      "icon_id": "8967216",
+      "name": "Lbcn",
+      "font_class": "coin-lbcn",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    },
+    {
+      "icon_id": "9011083",
+      "name": "logo-fota",
+      "font_class": "logo-fota",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "9038043",
+      "name": "phv",
+      "font_class": "coin-phv",
+      "unicode": "e6ce",
+      "unicode_decimal": 59086
+    },
+    {
+      "icon_id": "9171937",
+      "name": "hub",
+      "font_class": "coin-hnb",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    },
+    {
+      "icon_id": "9173187",
+      "name": "fbc",
+      "font_class": "coin-fbc",
+      "unicode": "e6d3",
+      "unicode_decimal": 59091
+    },
+    {
+      "icon_id": "9235506",
+      "name": "BAW",
+      "font_class": "coin-baw",
+      "unicode": "e6d5",
+      "unicode_decimal": 59093
+    },
+    {
+      "icon_id": "9251773",
+      "name": "apl",
+      "font_class": "coin-apl",
+      "unicode": "e6d8",
+      "unicode_decimal": 59096
+    },
+    {
+      "icon_id": "9524772",
+      "name": "htb",
+      "font_class": "coin-htb",
+      "unicode": "e6e2",
+      "unicode_decimal": 59106
+    },
+    {
+      "icon_id": "9621570",
+      "name": "musk",
+      "font_class": "coin-musk",
+      "unicode": "e6e7",
+      "unicode_decimal": 59111
+    },
+    {
+      "icon_id": "9726601",
+      "name": "gmb",
+      "font_class": "coin-gmb",
+      "unicode": "e6f0",
+      "unicode_decimal": 59120
+    },
+    {
+      "icon_id": "9744980",
+      "name": "acc",
+      "font_class": "coin-acc",
+      "unicode": "e6f2",
+      "unicode_decimal": 59122
+    },
+    {
+      "icon_id": "10321465",
+      "name": "Kcash",
+      "font_class": "coin-kcash",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "11055895",
+      "name": "俄罗斯",
+      "font_class": "flag-eg",
+      "unicode": "e6f5",
+      "unicode_decimal": 59125
+    }
+  ]
+}

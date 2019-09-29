@@ -1,5 +1,5 @@
 /* demo 演示项目 */
-// 当前版本 v0.7.1.20190723
+// 当前版本 v0.8.0.20190927
 
 const { $ } = window;
 
@@ -7,7 +7,7 @@ const { $ } = window;
 window.userId = '2509245659993474048'; // 测试账号
 window.password = '9ncfhrj3w2'; // 测试密码
 window.localStorage.option_userId = window.userId;
-window.localStorage.option_sessionId = 'ca6607a327190cb047bd61ce451f8860'; // 如果过期，请改用真实账号测试
+window.localStorage.option_sessionId = '76d89c320dfae8b9e5d20bf7e8986e5c'; // 如果过期，请改用真实账号测试
 
 // 初始化参数
 window.FOTA_OPTION_CONFIG = {
@@ -16,6 +16,8 @@ window.FOTA_OPTION_CONFIG = {
     httpHost: 'https://api-test.fota.com/mapi',
     // 申请的平台id字符串
     brokerId: '2',
+    // 语言选择
+    listLang: ['en', 'zh', 'ko', 'vi', 'ru'],
     // 排行榜开关
     showRank: true,
     // SDK加载完成回调
@@ -77,7 +79,7 @@ window.demo = {
         this.optionManager.setLanguege(this.optionManager[name]);
     },
     // 登录，自由发挥
-    login() {
+    demo_login() {
         return $.ajax(this.optionManager.getConfig().httpHost + mapUrl.login, {
             method: 'post',
             headers: {
@@ -99,7 +101,7 @@ window.demo = {
         });
     },
     // 设置用户信息
-    setUserInfo() {
+    demo_setUserInfo() {
         this.optionManager.setUserInfo({
             userId: this.userId,
             token: this.token

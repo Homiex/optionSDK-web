@@ -4,39 +4,39 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "favicon.ico"
   },
   {
-    "revision": "cc332500891e565ac0ca",
-    "url": "static/css/4.bd0504d8.css"
+    "revision": "07bf45f9966af6e401fe",
+    "url": "static/css/app.48993d2b.css"
   },
   {
-    "revision": "8c8d20cef88734ffb70b",
-    "url": "static/css/app.12e8c2f9.css"
-  },
-  {
-    "revision": "1eb06aed98c396eb91fe8d8331b1ce8e",
+    "revision": "def6d18f29a491103448ebf766bd6fdc",
     "url": "static/iconfont/iconfont.css"
   },
   {
-    "revision": "7f3116a6e1655abf7013c26fd4a82212",
+    "revision": "affb7a694b5e8ec3d478092790c8528a",
     "url": "static/iconfont/iconfont.eot"
   },
   {
-    "revision": "614bbbc2cf22aa7d0c62abb812745ff7",
+    "revision": "ee8d2f1678b02433fa30a3c2e4501d64",
     "url": "static/iconfont/iconfont.js"
   },
   {
-    "revision": "a42cd0124184fda44b412f69c9efd46c",
+    "revision": "c23f6d44c6a47ef1d87a7a88583f5e72",
+    "url": "static/iconfont/iconfont.json"
+  },
+  {
+    "revision": "dd1379cfa2ac6f486a4583f23a6a7e4b",
     "url": "static/iconfont/iconfont.svg"
   },
   {
-    "revision": "fbf4a33af9885b21fd47d683e4f1803d",
+    "revision": "4a57de45f96e336f927352f1e2256714",
     "url": "static/iconfont/iconfont.ttf"
   },
   {
-    "revision": "efb1d498f7443ea4b48519b5a614befb",
+    "revision": "43324f8b02e727009aafe5fe16c1fb20",
     "url": "static/iconfont/iconfont.woff"
   },
   {
-    "revision": "f3bb1c8e2e342b304276f9a65e8aa8ae",
+    "revision": "f528795b70a55cec334ff55c24147464",
     "url": "static/iconfont/iconfont.woff2"
   },
   {
@@ -44,28 +44,56 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "static/img/bg-chart.ec1abc6d.png"
   },
   {
+    "revision": "edfff6b2a2973205309488ebe3995aff",
+    "url": "static/img/entry.edfff6b2.png"
+  },
+  {
     "revision": "b50cd744e5e2305388c6f1b02aa0f7ab",
     "url": "static/img/js-rule.b50cd744.png"
   },
   {
-    "revision": "cc332500891e565ac0ca",
-    "url": "static/js/4.daaa31ea.js"
+    "revision": "a723dbc8f65d0a69911e843287c09eb4",
+    "url": "static/img/pipei.a723dbc8.png"
   },
   {
-    "revision": "8c8d20cef88734ffb70b",
-    "url": "static/js/app.cc62959f.js"
+    "revision": "4b364935f55e85499732fc28d94573a0",
+    "url": "static/img/pk-2.4b364935.png"
   },
   {
-    "revision": "8fdb301f4d07a8a23e32",
-    "url": "static/js/highcharts.b440f5a1.js"
+    "revision": "f825269087d37a74bbaa5bae9ed01a02",
+    "url": "static/img/pk-icon.f8252690.png"
   },
   {
-    "revision": "bd146714bb65281c9e83",
-    "url": "static/js/manifest.de4ce8a7.js"
+    "revision": "5795668d7e6510f1e6db0d1432d6d5fa",
+    "url": "static/img/pk.5795668d.png"
   },
   {
-    "revision": "752c6fa48823de58ac52",
-    "url": "static/js/vendor.5d2468eb.js"
+    "revision": "9c94a4ed16828f95de3c6974a5667e76",
+    "url": "static/img/prize.9c94a4ed.png"
+  },
+  {
+    "revision": "e99a2b4153fcc1e24b8e317473e26b0b",
+    "url": "static/img/result-bg.e99a2b41.png"
+  },
+  {
+    "revision": "f0d316a5e61d11c496955836fe3d7226",
+    "url": "static/img/rule-bg.f0d316a5.png"
+  },
+  {
+    "revision": "f98f331cca0d57ebc68dffbb6d8cd775",
+    "url": "static/img/search.f98f331c.png"
+  },
+  {
+    "revision": "07bf45f9966af6e401fe",
+    "url": "static/js/app.e7b458ac.js"
+  },
+  {
+    "revision": "d5185330a52352304759",
+    "url": "static/js/manifest.0ef176c0.js"
+  },
+  {
+    "revision": "89ae8562ea9be57f48f1",
+    "url": "static/js/vendor.4e14deea.js"
   },
   {
     "revision": "ab5ac977d30db6829e21aaf5cba5a013",

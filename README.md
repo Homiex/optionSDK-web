@@ -1,4 +1,4 @@
-# option-sdkweb-demo v0.7.1.20190723
+# option-sdkweb-demo v0.8.0.20190927
 ## 目录
 - [一、集成SDK](#一集成sdk)
 - [二、快速使用SDK](#二快速使用sdk)
@@ -138,6 +138,8 @@ optionManager.setLanguege(optionManager.LANGAUGE_SIMPLE_CHINESE)
 optionManager.setLanguege(optionManager.LANGAUGE_KOREAN)
 // LANGAUGE_VIETNAM - 越南语
 optionManager.setLanguege(optionManager.LANGAUGE_VIETNAM)
+// LANGAUGE_RUSSIAN - 俄语
+optionManager.setLanguege(optionManager.LANGAUGE_RUSSIAN)
 ```
 
 ### 3.5 设置登录token
@@ -186,8 +188,11 @@ optionManager.getConfig()
 #### 如何增加自定义的UI代码
 - 可以在原有html页面上添加任意html+css+js的代码。
 
-#### 静态资源如图片或者字体提示404错误
+#### 静态资源（如图片或者字体）提示404错误
 - 静态资源打包时，在路径里包含了static，建议保留文件夹命名。如果要修改文件夹名，请同步调整css和js文件内的路径变量。
+
+#### http请求提示404错误
+- 老版本的httpHost配置里有一个v1的字符串，参考demo.js去掉原地址里的v1。
 
 #### 升级后的sw打包机制，有什么变化
 - 目前使用workbox插件管理sw，打包后的目录里会增加workbox-v4的文件夹。
@@ -198,14 +203,14 @@ optionManager.getConfig()
 #### 如何隐藏教学视频
 - 设置showVideo为false。
 
+#### 如何隐藏PK模块
+- 设置showPK为false。
+
 #### 如何隐藏Gamma期权的教程弹窗
 - 在localStorage加一个option_gammarule的key，值为1。
 
 #### 如何配置Gamma期权的上线和下线
 - 和商务沟通，由我们在配置后台操作。
-
-#### http请求报404的异常
-- 老版本的httpHost配置里有一个v1的字符串，参考demo.js去掉地址里的v1。
 
 #### 如何实现灵活上币
 - iconfont文件目前以固定地址引入，地址可加时间戳。配置后台添加新币种后，线上文件内容会更新，达到灵活上币的效果。
@@ -218,6 +223,8 @@ optionManager.getConfig()
 
 ## 五、更新记录
 以下是SDK更新记录
+
+v0.8.0.20190927 增加俄语支持，优化代码
 
 v0.7.1.20190723 优化性能，完善异常处理
 
