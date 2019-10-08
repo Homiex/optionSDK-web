@@ -1,4 +1,4 @@
-# option-sdkweb-demo v0.8.0.20190927
+# option-sdkweb-demo v0.8.1.20191008
 ## 目录
 - [一、集成SDK](#一集成sdk)
 - [二、快速使用SDK](#二快速使用sdk)
@@ -66,8 +66,8 @@ brokerId、appkey、signature是有绑定关系的，需要在js文件中使用�
 ```javascript
 window.FOTA_OPTION_CONFIG = {
     isDevelopment: true,
-    socketHost: 'wss://api-test.fota.com/mapi/websocket',
-    httpHost: 'http://api-test.fota.com/mapi',
+    socketHost: 'wss://api-test.weoption.com/mapi/websocket',
+    httpHost: 'http://api-test.weoption.com/mapi',
     // 申请的平台id字符串
     brokerId: 'test',
     // 排行榜开关
@@ -223,6 +223,8 @@ optionManager.getConfig()
 
 ## 五、更新记录
 以下是SDK更新记录
+
+v0.8.1.20191008 更新api域名
 
 v0.8.0.20190927 增加俄语支持，优化代码
 

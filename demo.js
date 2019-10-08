@@ -1,5 +1,5 @@
 /* demo 演示项目 */
-// 当前版本 v0.8.0.20190927
+// 当前版本 v0.8.1.20191008
 
 const { $ } = window;
 
@@ -7,7 +7,7 @@ const { $ } = window;
 window.userId = '2509245659993474048'; // 测试账号
 window.password = '9ncfhrj3w2'; // 测试密码
 window.localStorage.option_userId = window.userId;
-window.localStorage.option_sessionId = '76d89c320dfae8b9e5d20bf7e8986e5c'; // 如果过期，请改用真实账号测试
+window.localStorage.option_sessionId = '323be8bae8748f86137754abd48aa383'; // 如果过期，请改用真实账号测试
 
 // 初始化参数
 window.FOTA_OPTION_CONFIG = {
@@ -49,6 +49,10 @@ window.demo = {
     on(event, data) {
         if (event === 'login') {
             console.log('跳转登录');
+            demo.demo_login()
+            .then(() => {
+                demo.demo_setUserInfo();
+            });
         } else if (event === 'deposit') {
             console.log('跳转充值');
         } else if (event === 'allorder') {
