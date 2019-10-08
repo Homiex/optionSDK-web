@@ -12,8 +12,8 @@ window.localStorage.option_sessionId = '323be8bae8748f86137754abd48aa383'; // �
 // 初始化参数
 window.FOTA_OPTION_CONFIG = {
     isDevelopment: true,
-    socketHost: 'wss://api-test.fota.com/mapi/websocket',
-    httpHost: 'https://api-test.fota.com/mapi',
+    socketHost: 'wss://api-test.weoption.com/mapi/websocket',
+    httpHost: 'https://api-test.weoption.com/mapi',
     // 申请的平台id字符串
     brokerId: '2',
     // 语言选择
